@@ -80,3 +80,63 @@
 # numbers = (1,2,3)
 # numbers.count(2)
 
+# name = input("What is your name? ")
+# length= len(name)
+# print(length)
+# newlength = str(length)
+# print(type(length))
+# print(type(newlength))
+
+# a = 123.12
+# newtype = int(a)
+# print(newtype)
+
+# years_input = input('Enter number of years: ')
+# week_convert = (int)(years_input) * 52
+# newYears_input = str(years_input)
+# newWeek_input = str(week_convert)
+# print ("There are " + newWeek_input + " weeks in " + newYears_input + " years")
+
+# years_input = input('Enter number of years: ')
+# week_convert = (int)(years_input) * 52
+# print (f"There are {week_convert} weeks in {years_input} years.")
+
+# print("Welcome to the Group Name Generator")
+# color = input("What is favourite color? ")
+# animal = input("What is favourite animal? ")
+# print (f"You group name could be {color} {animal}")
+
+# hours = input("Enter Hours: ")
+# rate = input("Enter Rate: ")
+# pay = int(hours) * float(rate)
+# print(f"{pay:.2f}")
+
+# celcius = input("Enter temperature in Celsius: ")
+# fahrenheit = (int(celcius) * 9 / 5) + 32
+# print(f"{int(fahrenheit)} Fahrenheit")
+
+# print("Welcome to the Trip Cost Calculator!")
+# hotel_days = input("How many days will you stay? ")
+# hotel_cost = input("How much hotel cost per night? $")
+# flight_cost = input("How much does flight cost? $")
+# car_rental = input("If you need rental car please enter the price otherwise enter zero. $")
+# other_expenses = input("Enter other possible expenses: $")
+# total_cost = (float(hotel_days) * float(hotel_cost)) + float(flight_cost) + float(car_rental) + float(other_expenses)
+# print(f"Total Cost: ${total_cost:.2f}")
+
+# boolean = 2 > 1
+# print(boolean)
+
+# print ("Welcome")
+# salary = int(input("What is your salary?"))
+# if salary > 2000:
+#     print("Nice")
+# else:
+#     print("Not nice")
+
+a = int(input("Enter a number: "))
+if a % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+    
