@@ -134,9 +134,171 @@
 # else:
 #     print("Not nice")
 
-a = int(input("Enter a number: "))
-if a % 2 == 0:
-    print("Even")
+# a = int(input("Enter a number: "))
+# if a % 2 == 0:
+#     print("Even")
+# else:
+#     print("Odd")
+
+# salary = int(input("What is your salary? :"))
+# if(salary > 2000):
+#     print("More than 2000")
+#     credit_score = int(input("What is your credit score?"))
+#     if credit_score > 800:
+#         print("Interest rate 10%")
+#     elif credit_score > 750:
+#         print("INterest rate 9%")
+#     else:
+#         print("Interest rate 5%")
+# else:
+#     print("Sorry, your are not eligible")
+
+
+# height = float(input("Enter your height in m: "))
+# weight =  float(input("Enter your weight in kg: "))
+# bmi = round(float(weight / height **2),1)
+# if bmi < 18.5:
+#     print(f"{bmi} is Underweight")
+# elif bmi > 18.5 and bmi < 25:
+#     print(f"{bmi} is Normal")
+# elif bmi > 25 and bmi < 30:
+#     print(f"{bmi} is Overweight")
+# elif bmi > 30 and bmi < 35:
+#     print(f"{bmi} is Obese")
+# else:
+#     print(f"{bmi} is an Invalid input")
+
+# Display the burger menu
+# print("Burger List:")
+# print("Mini Burger (M): $5")
+# print("Normal Burger (N): $8")
+# print("Large Burger (L): $10")
+# print("Add Mushroom: For Mini and Normal = $1, for Large = $2")
+# print("Extra Cheese: $1")
+
+# # Getting user inputs
+# size = input("What type of burger do you want? (M/N/L): ").strip().upper()
+# add_mushroom = input("Add Mushroom? Yes (Y) or No (N): ").strip().upper()
+# extra_cheese = input("Extra Cheese? Yes (Y) or No (N): ").strip().upper()
+
+# # Initialize cost and validate burger size
+# cost = 0
+# if size == "M":
+#     cost = 5
+#     print("You chose Mini Burger.")
+# elif size == "N":
+#     cost = 8
+#     print("You chose Normal Burger.")
+# elif size == "L":
+#     cost = 10
+#     print("You chose Large Burger.")
+# else:
+#     print("Invalid burger size selected. Please choose M, N, or L.")
+#     exit()  # Exit if the burger size is invalid
+
+# # Adding cost for mushrooms
+# if add_mushroom == "Y":
+#     if size == "L":
+#         cost += 2  # Large burger mushroom cost
+#     else:
+#         cost += 1  # Mini and Normal burger mushroom cost
+#     print("Added Mushroom.")
+# elif add_mushroom == "N":
+#     print("No Mushroom added.")
+# else:
+#     print("Invalid input for mushrooms. Please choose Y or N.")
+#     exit()  # Exit if the mushroom choice is invalid
+
+# # Adding cost for extra cheese
+# if extra_cheese == "Y":
+#     cost += 1
+#     print("Added Cheese.")
+# elif extra_cheese == "N":
+#     print("No Cheese added.")
+# else:
+#     print("Invalid input for cheese. Please choose Y or N.")
+#     exit()  # Exit if the cheese choice is invalid
+
+# # Display the total cost
+# print(f"Your total cost is ${cost:.2f}.")
+
+
+# Display the burger menu
+print("Burger List:")
+print("Mini Burger (M): $5")
+print("Normal Burger (N): $8")
+print("Large Burger (L): $10")
+print("Add Mushroom: For Mini and Normal = $1, for Large = $2")
+print("Extra Cheese: $1")
+
+# Initialize cost variables
+burger_cost = 0
+total_cost = 0
+
+# Getting user inputs
+size = input("What type of burger do you want? (M/N/L): ").strip().upper()
+
+# Validate burger size input
+if size == "M":
+    burger_cost = 5
+    print("You chose Mini Burger.")
+elif size == "N":
+    burger_cost = 8
+    print("You chose Normal Burger.")
+elif size == "L":
+    burger_cost = 10
+    print("You chose Large Burger.")
 else:
-    print("Odd")
+    print("Invalid burger size selected. Please choose M, N, or L.")
+    exit()  # Exit if the burger size is invalid
+
+# Use try-except to handle integer input for the number of burgers
+try:
+    num_burgers = int(input("How many burgers do you want to order? "))
+    if num_burgers <= 0:
+        raise ValueError("The number of burgers must be a positive integer.")
+except ValueError as ve:
+    print(f"Invalid input for the number of burgers: {ve}")
+    exit()  # Exit if the input is not a valid positive integer
+
+# Calculate the base cost based on the number of burgers
+total_cost = burger_cost * num_burgers
+
+# Getting additional options
+add_mushroom = input("Add Mushroom? Yes (Y) or No (N): ").strip().upper()
+extra_cheese = input("Extra Cheese? Yes (Y) or No (N): ").strip().upper()
+
+# Adding cost for mushrooms
+if add_mushroom == "Y":
+    if size == "L":
+        mushroom_cost = 2
+    else:
+        mushroom_cost = 1
+    total_cost += mushroom_cost * num_burgers
+    print(f"Added Mushroom. Additional cost: ${mushroom_cost * num_burgers:.2f}")
+elif add_mushroom == "N":
+    print("No Mushroom added.")
+else:
+    print("Invalid input for mushrooms. Please choose Y or N.")
+    exit()  # Exit if the mushroom choice is invalid
+
+# Adding cost for extra cheese
+if extra_cheese == "Y":
+    cheese_cost = 1
+    total_cost += cheese_cost * num_burgers
+    print(f"Added Cheese. Additional cost: ${cheese_cost * num_burgers:.2f}")
+elif extra_cheese == "N":
+    print("No Cheese added.")
+else:
+    print("Invalid input for cheese. Please choose Y or N.")
+    exit()  # Exit if the cheese choice is invalid
+
+# Display the total cost
+print(f"Your total cost for {num_burgers} burger(s) is ${total_cost:.2f}.")
+
+    
+    
+
+
+
     
